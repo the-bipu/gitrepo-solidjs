@@ -1,11 +1,11 @@
 import { Component } from 'solid-js';
 
-const Saved: Component = () => {
+const Feature: Component = () => {
     return (
         <div>
-            <h2>Saved</h2>
+            <h2>Feature</h2>
         </div>
     )
 }
 
-export default Saved;
+export default Feature;

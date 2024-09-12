@@ -3,15 +3,23 @@ import { Route, Router } from '@solidjs/router';
 
 import Nav from './components/Nav';
 import Home from './pages/Home';
-import Saved from './pages/Saved';
+import Product from './pages/Product';
+import Feature from './pages/Feature';
+import MarketPlace from './pages/MarketPlace';
+import Company from './pages/Company';
+import Login from './pages/Login';
 
 const App: Component = () => {
   return (
-    <div class='w-full min-h-screen'>
+    <div>
       <Nav />
       <Router>
         <Route path="/" component={Home} />
-        <Route path="/saved" component={Saved} />
+        <Route path="/product" component={Product} />
+        <Route path="/features" component={Feature} />
+        <Route path="/company" component={Company} />
+        <Route path="/marketplace" component={MarketPlace} />
+        <Route path="/login" component={Login} />
       </Router>
     </div>
   );
