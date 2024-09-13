@@ -8,6 +8,7 @@ import Feature from './pages/Feature';
 import MarketPlace from './pages/MarketPlace';
 import Company from './pages/Company';
 import Login from './pages/Login';
+import NotFound from './pages/_404';
 
 const App: Component = () => {
   return (
@@ -20,6 +21,7 @@ const App: Component = () => {
         <Route path="/company" component={Company} />
         <Route path="/marketplace" component={MarketPlace} />
         <Route path="/login" component={Login} />
+        <Route path='/*' component={NotFound} />
       </Router>
     </div>
   );
