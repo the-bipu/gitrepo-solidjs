@@ -2,6 +2,7 @@ import { Component } from 'solid-js';
 import Join from '../components/Join';
 
 const Home: Component = () => {
+
     return (
         <div class="bg-white">
 
