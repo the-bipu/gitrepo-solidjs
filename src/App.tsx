@@ -20,20 +20,16 @@ createEffect(async () => {
 })
 
 const App: Component = () => {
-
   return (
-    <div>
-      <Nav />
-      <Router>
-        <Route path="/" component={Home} />
-        <Route path="/product" component={Product} />
-        <Route path="/features" component={Feature} />
-        <Route path="/company" component={Company} />
-        <Route path="/marketplace" component={MarketPlace} />
-        <Route path="/login" component={Login} />
-        <Route path='/*' component={NotFound} />
-      </Router>
-    </div>
+    <>
+      <Route path="/" component={Home} />
+      <Route path="/product" component={Product} />
+      <Route path="/features" component={Feature} />
+      <Route path="/company" component={Company} />
+      <Route path="/marketplace" component={MarketPlace} />
+      <Route path="/login" component={Login} />
+      <Route path='/*' component={NotFound} />
+    </>
   );
 };
 

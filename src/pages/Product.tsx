@@ -1,6 +1,7 @@
 import { Component, createEffect, For } from 'solid-js';
 import { repos, setUsername, username } from '../App';
 import Card, { Repo } from '../components/Card';
+import Nav from '../components/Nav';
 
 const Product: Component = () => {
 
@@ -14,6 +15,8 @@ const Product: Component = () => {
 
     return (
         <div class='w-full min-h-screen flex flex-col items-center pt-20'>
+            <Nav />
+
             <div class='w-11/12 h-full flex flex-col'>
                 <h2 class='text-3xl font-bold'>Get Data</h2>
                 <form class='mt-3 flex flex-row gap-2' onSubmit={(event) => refetchWithUsername(event)}>
