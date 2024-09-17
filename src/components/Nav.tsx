@@ -1,3 +1,4 @@
+import { A } from '@solidjs/router';
 import { Component, createSignal } from 'solid-js';
 const [menuOpen, setMenuOpen] = createSignal(false);
 
@@ -6,10 +7,10 @@ const Nav: Component = () => {
         <header class="absolute inset-x-0 top-0 z-50">
             <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
-                    <a href="/" class="-m-1.5 p-1.5">
+                    <A href="/" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
                         <img class="h-8 w-auto" src="/tail.svg" alt="" />
-                    </a>
+                    </A>
                 </div>
                 <div class="flex lg:hidden">
                     <button
@@ -25,10 +26,11 @@ const Nav: Component = () => {
                 <div class="hidden lg:flex lg:gap-x-12">
                     <a href="/product" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
                     <a href="/features" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-                    <a href="/marketplace" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-                    <a href="/company" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+                    <A href="/marketplace" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</A>
+                    <A href="/company" class="text-sm font-semibold leading-6 text-gray-900">Company</A>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                    <A href="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</A>
                 </div>
             </nav>
 
@@ -55,13 +57,13 @@ const Nav: Component = () => {
                         <div class="mt-6 flow-root">
                             <div class="-my-6 divide-y divide-gray-500/10">
                                 <div class="space-y-2 py-6">
-                                    <a href="/product" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-                                    <a href="/features" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-                                    <a href="/marketplace" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                                    <a href="/company" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                                    <A href="/product" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</A>
+                                    <A href="/features" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</A>
+                                    <A href="/marketplace" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</A>
+                                    <A href="/company" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</A>
                                 </div>
                                 <div class="py-6">
-                                    <a href="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+                                    <A href="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</A>
                                 </div>
                             </div>
                         </div>
