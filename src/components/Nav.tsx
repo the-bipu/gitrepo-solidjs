@@ -24,13 +24,13 @@ const Nav: Component = () => {
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="/product" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-                    <a href="/features" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+                    <A href="/product" class="text-sm font-semibold leading-6 text-gray-900">Product</A>
+                    <A href="/features" class="text-sm font-semibold leading-6 text-gray-900">Features</A>
                     <A href="/marketplace" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</A>
                     <A href="/company" class="text-sm font-semibold leading-6 text-gray-900">Company</A>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <A href="/login" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</A>
+                    <A  href="/login" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></A>
                 </div>
             </nav>
 
