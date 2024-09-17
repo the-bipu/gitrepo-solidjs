@@ -13,13 +13,13 @@ import NotFound from './pages/_404';
 const [username, setUsername] = createSignal('the-bipu');
 const [repos, setRepos] = createSignal([]);
 
-const App: Component = () => {
+createEffect(async () => {
+  const response = await fetch(`https://api.github.com/users/${username()}/repos?sort=created`);
+  const data = await response.json();
+  setRepos(data);
+})
 
-  createEffect(async () => {
-    const response = await fetch(`https://api.github.com/users/${username()}/repos?sort=created`);
-    const data = await response.json();
-    setRepos(data);
-  })
+const App: Component = () => {
 
   return (
     <div>

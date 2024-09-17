@@ -1,4 +1,5 @@
 import { Component } from 'solid-js';
+import { savedRepo, setSavedRepo } from '../pages/Feature';
 
 export type Repo = {
     id: string
@@ -15,6 +16,22 @@ interface Props {
     repo: Repo
 }
 
+const saveRepo = (repo: Repo) => {
+    setSavedRepo([repo, ...savedRepo()])
+    localStorage.setItem('savedRepos', JSON.stringify(savedRepo()))
+}
+
+const unsaveRepo = (repoId: string) => {
+    const nextState = savedRepo()?.filter((item) => item.id !== repoId)
+    setSavedRepo(nextState)
+    localStorage.setItem('savedRepos', JSON.stringify(savedRepo()))
+}
+
+const repoIsSaved = (repoId: string) => {
+    const repo = savedRepo()?.filter((item) => item.id === repoId)
+    return repo?.length > 0
+}
+
 const Card: Component<Props> = ({ repo }) => {
     return (
         <div class='w-full h-auto flex flex-col mb-4 shadow p-4'>
@@ -27,7 +44,11 @@ const Card: Component<Props> = ({ repo }) => {
                 <p class='text-base font-normal'>{repo.description}</p>
 
                 <div>
-                    <button class='px-4 py-1 w-auto border border-gray-200 rounded transition-all hover:bg-gray-100'>Save</button>
+                    {repoIsSaved(repo.id) ? (
+                        <button class='px-4 py-1 w-auto border border-gray-200 rounded transition-all hover:bg-gray-100' onClick={() => unsaveRepo(repo.id)}>Unsave</button>
+                    ) : (
+                        <button class='px-4 py-1 w-auto border border-gray-200 rounded transition-all hover:bg-gray-100' onClick={() => saveRepo(repo)}>Save</button>
+                    )}
                 </div>
             </div>
         </div>
