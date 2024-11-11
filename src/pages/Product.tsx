@@ -28,9 +28,11 @@ const Product: Component = () => {
                 </form>
                 <h3 class='mt-4 font-bold text-xl mb-4'>Github Repositories of {username()}</h3>
 
-                <For each={repos()}>
-                    {(repo: Repo) => <Card repo={repo} />}
-                </For>
+                <div class='flex flex-row flex-wrap gap-4 justify-between w-full h-auto'>
+                    <For each={repos()}>
+                        {(repo: Repo) => <Card repo={repo} />}
+                    </For>
+                </div>
             </div>
         </div>
     )

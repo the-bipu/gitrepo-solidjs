@@ -34,7 +34,7 @@ const repoIsSaved = (repoId: string) => {
 
 const Card: Component<Props> = ({ repo }) => {
     return (
-        <div class='w-full h-auto flex flex-col mb-4 shadow p-4'>
+        <div class='md:w-96 w-full h-auto flex flex-col mb-4 shadow p-4'>
             <div>&#11088; stars {repo.stargazers_count}</div>
 
             <div class='flex flex-col gap-2 w-auto'>
